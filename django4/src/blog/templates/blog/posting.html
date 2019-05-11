@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>글쓰기</h3>
+
+<!-- form 태그의 enctype  = 'multipart/form-data'
+->해당 폼으로 파일데이터를 웹서버에 전달할수있도롟 허용하는 속성
+만약, -->
+{# form : PostingForm#}
+<form action = '' method = 'post' enctype = 'multipart/form-data'>
+	{% csrf_token %}
+	
+	<table>
+	{{form.as_table}}
+	</table>
+	
+	
+	
+</form>
+<a href = "{% url 'blog:index' %}">메인페이지로 돌아가기</a>
+{% endblock %}

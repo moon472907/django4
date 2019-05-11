@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3> 답변 항목 수정 </h3>
+{# obj : ChoiceForm 객체 #}
+<form action="" method="POST">
+	{% csrf_token %}
+	<ul>
+		{{ obj.as_ul }}
+	</ul>
+	<input type="submit" value="수정">
+</form>
+
+<a href="/vote/">메인페이지로 돌아가기</a>
+{%endblock %}
+
+
+
+
+
+
+
